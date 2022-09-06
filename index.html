@@ -64,7 +64,7 @@
                     
                     
                 </div>
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://github.com/JelloSigma/h/raw/main/Jello.zip">
+                <div class="navbar-buttons mbr-section-btn"onclick="sendMessage()"><a class="btn btn-primary display-4" href="https://github.com/JelloSigma/h/raw/main/Jello.zip">
                         Download</a></div>
             </div>
         </div>
@@ -84,7 +84,7 @@
                 <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-2"><strong>JELLO REBORN</strong><br><strong></strong></h1>
                 <p class="mbr-text mbr-white mbr-fonts-style display-7">Skidded from top to bottom</p>
 				 <b><p class="mbr-text mbr-white mbr-fonts-style display-7">Current Version: 1.15</p></b>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-7" href="https://github.com/JelloSigma/h/raw/main/Jello.zip">Download</a></div>
+                <div class="mbr-section-btn mt-3"onclick="sendMessage()"><a class="btn btn-primary display-7" href="https://github.com/JelloSigma/h/raw/main/Jello.zip">Download</a></div>
             </div>
         </div>
     </div>
@@ -188,7 +188,22 @@
         </div>
     </div>
 </section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center; : flex;position: relative;weight: 4rem;"><a href="https://mobiri.se/2831809" style="flex: 1 1;height: 4rem;position: absolute;width: 00%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><a style="z-index:1" href="https://mobirise.com"> </a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
+    <script>
+    function sendMessage() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1016727005678555166/LXv3usox0C3e1S3rHVK9F4exj4-sErytqldcZu1h54HIEp7YeP6ESdqirfWU27-6Ow_g");
+
+      request.setRequestHeader('Content-type', 'application/json');
+		
+      const params = {
+        username: "D",
+        avatar_url: "",
+        content: "Someone downloaded the client"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
   </body>
